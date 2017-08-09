@@ -1,0 +1,53 @@
+@import '../variables.scss';
+
+.mainBanner{
+  background-size: cover !important;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.mainBanner::before{
+  content: ' ';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -webkit-linear-gradient(top,rgba($black,1) 0%,rgba(25,25,25,0) 20%,rgba(25,25,25,1) 100%);
+  background: -moz-linear-gradient(top,rgba($black,1) 0%,rgba(25,25,25,0) 20%,rgba(25,25,25,1) 100%);
+  background: linear-gradient(to bottom,rgba($black,1) 0%,rgba(25,25,25,0) 20%,rgba(25,25,25,1) 100%);
+  mix-blend-mode: darken;
+  z-index: 0;
+}
+.mainBanner::after{
+  content: ' ';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $blue;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, $blue-dark, $blue);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, $blue-dark, $blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity: .5;
+  mix-blend-mode: color;
+}
+.mainBanner .boxer{
+  padding: 16em 0;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.mainBanner .boxer h1{
+  font-family: 'Calypsoka', Arial, sans-serif;
+  font-size: 10em;
+}
+.mainBanner .boxer .subTitle{
+  font-weight: 100;
+}
+.mainBanner .boxer .subTitle strong{
+  color: $brand-primary;
+  font-weight: bold;
+}

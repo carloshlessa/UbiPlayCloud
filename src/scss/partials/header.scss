@@ -1,0 +1,70 @@
+@import '../variables';
+.btMenuInitFinished .mainHeader {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mainHeader {
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  background-color: inherit;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 500;
+  /*opacity: 0;
+  visibility: hidden;*/
+  z-index: 2;
+}
+// Logo
+.mainHeader .logo{
+  line-height: 0;
+  float: left;
+  padding: 10px 0;
+}
+.mainHeader .logo img{
+  height: 65px;
+  width: auto;
+  display: block;
+}
+// -
+// nav
+.mainHeader nav{
+  float: right;
+}
+.mainHeader nav ul{
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.mainHeader nav ul li{
+  float: left;
+  position: relative;
+  z-index: 5;
+  padding: 0 30px 0 0;
+  display: block;
+}
+.mainHeader nav ul li a{
+  line-height: 80px;
+  color: #fff;
+  padding: 0;
+  text-transform: uppercase;
+  position: relative;
+}
+.mainHeader nav ul li a::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  z-index: 5;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  height: 4px;
+  background-color: $brand-primary;
+
+}

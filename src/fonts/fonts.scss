@@ -1,0 +1,6 @@
+@import "../scss/mixins/font-face.scss";
+@include font-face(Montserrat, Montserrat/Montserrat-Regular);
+@include font-face(Montserrat, Montserrat/Montserrat-Bold, Bold);
+@include font-face(Montserrat, Montserrat/Montserrat-SemiBold, 400);
+@include font-face(Montserrat, Montserrat/Montserrat-Light, 200);
+@include font-face(Calypsoka, Calypsoka/Calypsoka);
