@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../animate/animate.scss';
 .btMenuInitFinished .mainHeader {
   opacity: 1;
   visibility: visible;
@@ -18,6 +19,7 @@
   /*opacity: 0;
   visibility: hidden;*/
   z-index: 2;
+  @include fadeInDown($delay: 1.3s);
 }
 // Logo
 .mainHeader .logo{

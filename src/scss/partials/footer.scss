@@ -1,0 +1,59 @@
+@import '../variables.scss';
+@import '../animate/animate.scss';
+
+footer {
+  padding: 12em 0 9em 0;
+  text-align: center;
+  background-size: cover !important;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: -50px;
+}
+footer::before{
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -webkit-linear-gradient(top,rgba($black,1) 0%,rgba($black,.4) 50%,rgba($gray-dark,1) 100%);
+  background: -moz-linear-gradient(top,rgba($black,1) 0%,rgba($black,.4) 50%,rgba($gray-dark,1) 100%);
+  background: linear-gradient(to bottom,rgba($black,1) 0%,rgba($black,.4) 50%,rgba($gray-dark,1) 100%);
+  mix-blend-mode: darken;
+  z-index: 0;
+}
+footer .boxer {
+  position: relative;
+  z-index: 2;
+  @include fadeInDown($delay: 1.3s);
+}
+footer .boxer h3{
+  font-weight: bold;
+  font-size: 4em;
+  text-shadow: 0 3px 8px rgba($black,.5)
+}
+footer .boxer ul li{
+  padding: 0 .25em;
+  font-size: 2em;
+}
+footer .boxer ul li a{
+  color: $white
+}
+footer .boxer ul li a:hover{
+  color: $brand-primary
+}
+.copy{
+  padding: 2em;
+  background: $gray-dark;
+  text-align: center;
+  font-weight: 200;
+  font-size: .7em;
+}
+.copy .scnd{
+  font-size: .68em
+}
+.copy .scnd i{
+  @include pulse($duration: infinite);
+}

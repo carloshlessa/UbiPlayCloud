@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import MainBanner from './partials/MainBanner';
+import Music from './partials/Music';
+import Footer from './partials/Footer';
 
 class Layout extends Component {
     render(){
@@ -8,6 +10,8 @@ class Layout extends Component {
             <div>
                 <Header/>
                 <MainBanner/>
+                <Music/>
+                <Footer/>
             </div>
         )
     }

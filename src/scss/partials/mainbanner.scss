@@ -1,4 +1,5 @@
 @import '../variables.scss';
+@import '../animate/animate.scss';
 
 .mainBanner{
   background-size: cover !important;
@@ -35,17 +36,22 @@
   mix-blend-mode: color;
 }
 .mainBanner .boxer{
-  padding: 16em 0;
+  padding: 12em 0 22em 0;
   position: relative;
   z-index: 1;
   text-align: center;
 }
+.mainBanner .boxer header{
+  line-height: 1;
+}
 .mainBanner .boxer h1{
   font-family: 'Calypsoka', Arial, sans-serif;
   font-size: 10em;
+  @include fadeInDown($delay: .7s);
 }
 .mainBanner .boxer .subTitle{
   font-weight: 100;
+  @include fadeInUp($delay: 1s);
 }
 .mainBanner .boxer .subTitle strong{
   color: $brand-primary;

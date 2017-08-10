@@ -1,0 +1,82 @@
+@import '../variables.scss';
+@import '../animate/animate.scss';
+
+.music{
+  position: relative;
+  z-index:4;
+  @include fadeInDown($delay: .5s);
+}
+.musicCard {
+  position: relative;
+  margin: 1em 0;
+}
+.musicCard .boxer{
+  -webkit-box-shadow: 0 0 20px 0 rgba($black,75);
+  box-shadow: 0 0 20px 0 rgba($black,75);
+  position: relative;
+  overflow: hidden;
+  mix-blend-mode: darken;
+  cursor: pointer;
+}
+.musicCard .boxer a{
+  width: 100%;
+  height: 100%;
+}
+.musicCard .boxer:hover img{
+  transform: scale(1.1);
+}
+.musicCard .boxer:hover .btBoxer{
+  opacity: 1 !important;
+}
+
+.musicCard .boxer a img{
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+}
+.musicCard .boxer .btBoxer{
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: rgba($black, .5);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+.musicCard .boxer .btBoxer .musicInfo{
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+}
+.musicCard .boxer .btBoxer .musicInfo i{
+   display: inline-block;
+   border: 1px solid;
+   width: 70px;
+   height: 70px;
+   line-height: 70px;
+   border-radius: 50%;
+   font-size: 2em;
+  margin-bottom: 1em;
+}
+.musicCard .boxer .btBoxer .musicInfo i:hover{
+  background: $white;
+  color: $brand-primary;
+  border-color: $brand-primary;
+}
+.musicCard .boxer .btBoxer .musicInfo .trackName{
+  display: block;
+}
+.trackModalInfo li {
+  font-weight: 200;
+}
+.trackModalInfo li strong{
+  color: $gray-light
+}

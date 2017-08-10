@@ -50,7 +50,7 @@
 
 // Start with assigning color names to specific hex values.
 $white:  #fff;
-$black:  #191919;
+$black:  #000102;
 $red:    #d9534f;
 $orange: #f0ad4e;
 $yellow: #ffd500;
@@ -61,8 +61,8 @@ $pink:   #ff5b77;
 $purple: #613d7c;
 
 // Create grayscale
-$gray-dark:                 #292b2c;
-$gray:                      #464a4c;
+$gray-dark:                 #191919;
+$gray:                      #333333;
 $gray-light:                #636c72;
 $gray-lighter:              #eceeef;
 $gray-lightest:             #f7f7f9;
@@ -202,7 +202,7 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: "Montserrat", Arial, sans-serif;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:       $font-family-sans-serif;
