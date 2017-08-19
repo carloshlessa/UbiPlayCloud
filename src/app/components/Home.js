@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+// dependencies
+import React, {Component} from 'react';
 
 class Home extends Component {
-    render(){
+    render() {
         return (
             <div>
-                Home {this.props.label}
+                Home
             </div>
         )
     }
 }
+
 export default Home;

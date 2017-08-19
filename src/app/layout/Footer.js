@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from './../../../media/footerBg.jpg';
+import bg from '../../media/footerBg.jpg';
 
 
 const socialLinker = {

@@ -21,6 +21,7 @@
   z-index: 2;
   @include fadeInDown($delay: 1.3s);
 }
+// -
 // Logo
 .mainHeader .logo{
   line-height: 0;
@@ -57,16 +58,24 @@
   text-transform: uppercase;
   position: relative;
 }
-.mainHeader nav ul li a::after {
+.mainHeader nav ul li a:after{
   content: ' ';
   display: block;
   position: absolute;
   z-index: 5;
   bottom: -5px;
+  opacity: 0;
   left: 0;
   right: 0;
   pointer-events: none;
   height: 4px;
   background-color: $brand-primary;
-
+  transition: $transition-base;
+  width: 0;
+  margin: auto;
+}
+.mainHeader nav ul li a:hover::after,
+.mainHeader nav ul li a.active:after{
+  width: 100%;
+  opacity: 1;
 }

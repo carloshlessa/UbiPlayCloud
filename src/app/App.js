@@ -1,11 +1,33 @@
-import React, { Component } from 'react';
+// dependencies
+import React, {Component} from 'react';
+import {
+    BrowserRouter as Router,
+    Route
+} from 'react-router-dom';
+
+// assets
 import '../scss/app.scss';
-import Layout from "./layout/Layout";
+
+// partials
+import Header from './layout/Header';
+import Footer from './layout/Footer';
+
+// components
+import Home from './components/Home';
+import Music from './components/Music';
+
 
 class App extends Component {
   render() {
     return (
-      <Layout/>
+        <Router>
+            <div>
+                <Header/>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/music" component={Music}/>
+                <Footer/>
+            </div>
+        </Router>
     );
   }
 }

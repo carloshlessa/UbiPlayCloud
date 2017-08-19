@@ -1,11 +1,5 @@
 @import '../variables.scss';
 @import '../animate/animate.scss';
-
-.music{
-  position: relative;
-  z-index:4;
-  @include fadeInDown($delay: .5s);
-}
 .musicCard {
   position: relative;
   margin: 1em 0;

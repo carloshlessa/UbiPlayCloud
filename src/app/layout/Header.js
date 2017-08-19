@@ -1,27 +1,29 @@
-import React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-import Home from '../components/home';
-import Nav from './partials/Nav'
+// dependencies
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+
+// assets
 import Brand from '../../media/logo.svg';
 
-const Header = () =>{
-    return (
-        <header className="mainHeader transition">
-            <div className="container-fluid">
-                <Router>
-                    { /* Brand */ }
-                    <div className="logo">
-                        <Link to={Home}><img src={Brand} alt="Logo UbiPlayCloud" /></Link>
-                    </div>
-                </Router>
+// partials
+import Nav from './Nav';
 
-                { /* Nav */ }
-                <div className="">
+// components
+import Home from '../components/Home';
+
+class Header extends Component {
+    render() {
+        return (
+            <header className="mainHeader transition">
+                <div className="container-fluid">
+                    <div className="logo">
+                        <Link to={Home}><img src={Brand} alt="Logo UbiPlayCloud"/></Link>
+                    </div>
                     <Nav/>
                 </div>
-            </div>
-        </header>
-    )
-};
+            </header>
+        )
+    }
+}
 
 export default Header;
