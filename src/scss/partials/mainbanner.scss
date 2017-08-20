@@ -52,8 +52,5 @@
 .mainBanner .boxer .subTitle{
   font-weight: 100;
   @include fadeInUp($delay: 1s);
-}
-.mainBanner .boxer .subTitle strong{
   color: $brand-primary;
-  font-weight: bold;
 }

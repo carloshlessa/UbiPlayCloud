@@ -1,14 +1,13 @@
-// dependencies
 import React, {Component} from 'react';
 
-class Home extends Component {
-    render() {
+class NotFound extends Component{
+    render(){
         return (
             <div>
-                Home
+                Page Not Fount
             </div>
         )
     }
 }
 
-export default Home;
+export default NotFound;

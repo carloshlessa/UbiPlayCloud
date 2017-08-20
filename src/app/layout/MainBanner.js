@@ -1,9 +1,6 @@
 // dependencies
 import React, {Component} from 'react';
 
-// assets
-import bg from '../../media/mainBanner.jpg';
-
 class MainBanner extends Component {
     constructor(props) {
         super(props);
@@ -14,14 +11,12 @@ class MainBanner extends Component {
     }
     render() {
         return (
-            <section className="mainBanner" style={{backgroundImage: `url(${bg})`}}>
+            <section className="mainBanner" style={{backgroundImage: `url(${this.props.data.bg})`}}>
                 <div className="boxer">
                     <header>
-                        <h1 className="title">{this.props.title}</h1>
+                        <h1 className="title">{this.props.data.title}</h1>
 
-                        <div className="subTitle">
-                            a <strong>way</strong> to do it <strong>loud</strong>
-                        </div>
+                        <div className="subTitle">{this.props.data.subtitle}</div>
                     </header>
 
                 </div>

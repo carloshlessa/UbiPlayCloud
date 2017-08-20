@@ -1,36 +1,46 @@
 @import '../variables.scss';
 @import '../animate/animate.scss';
+
 .musicCard {
   position: relative;
   margin: 1em 0;
 }
-.musicCard .boxer{
-  -webkit-box-shadow: 0 0 20px 0 rgba($black,75);
-  box-shadow: 0 0 20px 0 rgba($black,75);
+
+.musicCard .boxer {
+  -webkit-box-shadow: 0 0 20px 0 rgba($black, 75);
+  box-shadow: 0 0 20px 0 rgba($black, 75);
   position: relative;
   overflow: hidden;
   mix-blend-mode: darken;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
-.musicCard .boxer a{
+
+.musicCard .boxer a {
   width: 100%;
   height: 100%;
 }
-.musicCard .boxer:hover img{
+
+.musicCard .boxer:hover img {
   transform: scale(1.1);
 }
-.musicCard .boxer:hover .btBoxer{
+
+.musicCard .boxer:hover .btBoxer {
   opacity: 1 !important;
 }
 
-.musicCard .boxer a img{
+.musicCard .boxer a img {
   display: block;
   width: 100%;
   height: auto;
   position: relative;
   z-index: -1;
 }
-.musicCard .boxer .btBoxer{
+
+.musicCard .boxer .btBoxer {
   pointer-events: none;
   position: absolute;
   left: 0;
@@ -45,32 +55,53 @@
   width: 100%;
   cursor: pointer;
 }
-.musicCard .boxer .btBoxer .musicInfo{
+
+.musicCard .boxer .btBoxer .musicInfo {
   width: 100%;
   text-align: center;
   text-transform: capitalize;
 }
-.musicCard .boxer .btBoxer .musicInfo i{
-   display: inline-block;
-   border: 1px solid;
-   width: 70px;
-   height: 70px;
-   line-height: 70px;
-   border-radius: 50%;
-   font-size: 2em;
+
+.musicCard .boxer .btBoxer .musicInfo i {
+  display: inline-block;
+  border: 1px solid;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  font-size: 2em;
   margin-bottom: 1em;
 }
-.musicCard .boxer .btBoxer .musicInfo i:hover{
+
+.musicCard .boxer .btBoxer .musicInfo i:hover {
   background: $white;
   color: $brand-primary;
   border-color: $brand-primary;
 }
-.musicCard .boxer .btBoxer .musicInfo .trackName{
+
+.musicCard .boxer .btBoxer .musicInfo .trackName {
   display: block;
 }
+
+.musicCard .boxer.addIcon i {
+  display: block;
+  margin: auto;
+  color: $brand-primary;
+  transform: scale(1.5);
+  font-size: 2em;
+  transition: $transition-base;
+  opacity: .6;
+}
+
+.musicCard .boxer.addIcon:hover i {
+  font-size: 2.5em;
+  opacity: 1;
+}
+
 .trackModalInfo li {
   font-weight: 200;
 }
-.trackModalInfo li strong{
+
+.trackModalInfo li strong {
   color: $gray-light
 }

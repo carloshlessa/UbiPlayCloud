@@ -8,16 +8,13 @@ import Brand from '../../media/logo.svg';
 // partials
 import Nav from './Nav';
 
-// components
-import Home from '../components/Home';
-
 class Header extends Component {
     render() {
         return (
             <header className="mainHeader transition">
                 <div className="container-fluid">
                     <div className="logo">
-                        <Link to={Home}><img src={Brand} alt="Logo UbiPlayCloud"/></Link>
+                        <Link to="/"><img src={Brand} alt="Logo UbiPlayCloud"/></Link>
                     </div>
                     <Nav/>
                 </div>

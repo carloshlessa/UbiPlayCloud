@@ -1,8 +1,9 @@
 // dependencies
 import React, {Component} from 'react';
-import {ModalContainer, ModalDialog} from 'react-modal-dialog';
-import axios from 'axios';
 import vars from '../../env';
+
+// partials
+import Modal from "../layout/Modal";
 
 
 class MusicCard extends Component {
@@ -10,48 +11,41 @@ class MusicCard extends Component {
         super(props);
         this.state = {
             data: props.data,
-            isShowingModal: false
+            isShowingModal: vars.modalOpened
         };
+        this.openModal = this.openModal.bind(this);
     }
 
-    // post test
-    componentDidMount() {
-        /*axios.post(`${vars.apiUrl}musics`, {
-            album: 'music1',
-            artist: 'music1',
-            track: 'music1'
-        })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });*/
-    }
+    // handle musicCard click to open modal
+    openModal(event){
+        event.preventDefault();
 
-    // handle clickers -> set state to validate after and open modal
-    handleClick = () => this.setState({isShowingModal: true});
-    handleClose = () => this.setState({isShowingModal: false});
+        // Set the state to re render
+        vars.modalOpened = true;
+        this.setState({isShowingModal: !this.state.isShowingModal}); // ES6 shortcut
+    }
 
     render() {
+        // modal gui builder
+        let modalBody = (props) => {
+          return (
+              <div>
+                  <h1><i className="fa fa-music">&nbsp;</i> #{props.data.id}</h1>
+                  <ul className="list-unstyled list-inline-item text-center trackModalInfo">
+                      <li className="list-inline-item"><strong>Id:</strong> {this.state.data.id}</li>
+                      <li className="list-inline-item"><strong>Album:</strong> {this.state.data.album}</li>
+                      <li className="list-inline-item"><strong>Artist:</strong> {this.state.data.artist}</li>
+                  </ul>
+              </div>
+          )
+        };
+
         return (
             <div key={this.props.data.id} className="musicCard col-md-4 col-ms-12">
-                <div className="boxer" onClick={this.handleClick}>
-                    {
-                        this.state.isShowingModal &&
-                        <ModalContainer className="ee" onClose={this.handleClose}>
-                            <ModalDialog onClose={this.handleClose}>
-                                <h1><i className="fa fa-music"> </i> {this.state.data.track}</h1>
-                                <ul className="list-unstyled list-inline-item text-center trackModalInfo">
-                                    <li className="list-inline-item"><strong>id:</strong> {this.state.data.id}</li>
-                                    <li className="list-inline-item"><strong>album:</strong> {this.state.data.album}</li>
-                                    <li className="list-inline-item"><strong>album:</strong> {this.state.data.artist}</li>
-                                </ul>
-                            </ModalDialog>
-                        </ModalContainer>
-                    }
+                {/* modal renderer*/}
+                { vars.modalOpened ? <Modal content={modalBody(this.props)} /> : null }
+                <div className="boxer" onClick={this.openModal}>
                     <a>
-
                         <img className="delayedTransition" src="http://via.placeholder.com/400" alt=""/>
                     </a>
                     <div className="btBoxer delayedTransition">
