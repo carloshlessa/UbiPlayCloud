@@ -15,8 +15,17 @@ class Music extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            music: []
+            music: [],
+            updated: false // flag to refresh component on song add
         };
+        this.refreshList = this.refreshList.bind(this)
+    }
+
+    refreshList(e) {
+        e.preventDefault();
+        this.setState({
+            updated: true
+        })
     }
 
 
@@ -49,6 +58,7 @@ class Music extends Component {
                                 <MusicCard key={groupItem.id} data={groupItem}/> )
                         })}
 
+                        {/*<AddMusic refresher={this.refreshList} />*/}
                         <AddMusic />
                     </div>
                 </section>

@@ -23,7 +23,10 @@ class Home extends Component {
                 { /* Container */}
                 <section className="container home">
                     <div className="row">
-                        Home
+                        <div className="col-lg-10 offset-lg-1 text-center">
+                        <p>The purpose of this project was to create a web-app, using React.</p>
+                        <p className="font-11">Made by Francisco Carvalho for <strong>Ubiwhere</strong></p>
+                    </div>
                     </div>
                 </section>
             </div>

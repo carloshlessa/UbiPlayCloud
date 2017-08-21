@@ -5,6 +5,25 @@
   position: relative;
   margin: 1em 0;
 }
+.musicCard .deleteIt {
+  position: absolute;
+  z-index: 15;
+  top: 15px;
+  right: 25px;
+  opacity: 0;
+  transition: $transition-base;
+  font-size: 1.2em;
+  cursor: pointer
+}
+
+.musicCard:hover .deleteIt {
+  opacity: 1
+}
+
+.musicCard .deleteIt:hover {
+  color: $brand-primary;
+
+}
 
 .musicCard .boxer {
   -webkit-box-shadow: 0 0 20px 0 rgba($black, 75);
@@ -62,7 +81,7 @@
   text-transform: capitalize;
 }
 
-.musicCard .boxer .btBoxer .musicInfo i {
+.musicCard .boxer .btBoxer .musicInfo i.bigIco {
   display: inline-block;
   border: 1px solid;
   width: 70px;
@@ -73,7 +92,7 @@
   margin-bottom: 1em;
 }
 
-.musicCard .boxer .btBoxer .musicInfo i:hover {
+.musicCard .musicInfo i:hover {
   background: $white;
   color: $brand-primary;
   border-color: $brand-primary;
@@ -104,4 +123,37 @@
 
 .trackModalInfo li strong {
   color: $gray-light
+}
+// -
+// AddMusic
+.addMusic form{
+  display: inline-block;
+}
+.addMusic form .form-group {
+  display: table-cell
+}
+.addMusic form .form-group input {
+  margin: 0 1%;
+}
+.addMusic form .form-group:first-child input{
+  margin-left: 0;
+}
+.addMusic form .form-group:last-child input{
+  margin-right: 0;
+}
+.addMusic form .addMusicBt{
+  color: $black;
+  background: $brand-primary;
+  transition: $transition-base;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin: 5% auto 0;
+  padding: 2% 5%;
+  cursor: pointer;
+}
+.addMusic form .addMusicBt:hover{
+  color: $white;
+  background: $black;
 }
